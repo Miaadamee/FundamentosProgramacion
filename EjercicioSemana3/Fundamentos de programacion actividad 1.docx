@@ -1,0 +1,94 @@
+# Ejercicio 1
+# SALIDA  -  Bienvenida
+print("=" * 45)
+print("BIENVENIDO A GAME STORE")
+print("=" * 45)
+print()
+
+# ENTRADA - Datos del cliente 
+nombre = input("Ingresa tu nombre: ")
+edad = int(input("Ingresa tu edad: "))
+#  PROCESAMIENTO -  precios fijos de los juegos 
+precio_fifa = 899.00
+precio_cod = 1299.00
+precio_hello_kitty = 599.00
+
+# SALIDA - Catalogo de productos 
+print("------- CATALOGO DE PRODUCTOS -------")
+print("1. FIFA 2025 - $" + str(precio_fifa))
+print("2. Call of duty - $" + str(precio_cod))
+print("3. Hello kitty island adventure - $" + str(precio_hello_kitty))
+print()
+
+# ENTRADA - Cantidad de cada juego 
+cantidad_fifa = float(input("¿Cuantos FIFA 2025 quieres?"))
+cantidad_cod = float(input("¿cuantos call of duty quieres?"))
+cantidad_hello_kitty = float(input("¿cuantos Hello kitty island adventure quieres?"))
+
+# PROCESAMIENTO - calculos por juego 
+total_fifa = precio_fifa * cantidad_fifa 
+total_cod = precio_cod * cantidad_cod 
+total_hello_kitty = precio_hello_kitty * cantidad_hello_kitty
+
+# PROCESAMIENTO - calculos totales 
+subtotal = total_fifa + total_cod + total_hello_kitty 
+iva = subtotal * 0.16
+total = subtotal + iva 
+
+# PROCESAMIENTO - cantidad total de juegos 
+cantidad_total = cantidad_fifa + cantidad_cod + cantidad_hello_kitty
+
+# PROCESAMIENTO - Crear ticket 
+print("TICKET DE COMPRA")
+print("=" * 45)
+print("Ciente: " + nombre)
+print("Edad: " + str(edad) + "años")
+print("=" * 45)
+print("DETALLE DE COMPRA:")
+print("FIFA 2025")
+print("  cantidad: " + str(cantidad_fifa))
+print("  precio unitario: $" + str(precio_fifa))
+print("  total: $" + str(total_fifa))
+print("call of duty:")
+print("   Cantidad: " + str(cantidad_cod))
+print("  precio unitario: $" + str(precio_cod))
+print(" total: $" + str(total_cod))
+print("Hello Kitty island adventure:")
+print(" cantidad: " + str(cantidad_hello_kitty))
+print("  precio unitario:$" + str(precio_hello_kitty))
+print("  total: $" + str(total_hello_kitty))
+print("=" * 45)
+print("Cantidad total de juegos: " + str(cantidad_total))
+print("subtotal: $" + str(subtotal))
+print("IVA (16%): $" + str(iva))
+print("=" * 45)
+print("TOTAL A PAGAR: $" + str(total))
+print()
+#  SALIDA - Mensaje de despedida
+print("¡Gracias por tu compra, " + nombre + "!")
+
+
+#Ejercicio #1: control de acceso a videojuego
+print("Ejercicio 1\n")
+
+edad = int(16)
+
+if edad >16:
+   print(" puedes jugar\n")
+else:
+    print("no puedes jugar\n")
+    
+    
+#Ejercicio #2: calculadora de promedio escolar 
+print("Ejercicio 2\n")
+
+calificacion = int(input("Ingresa tu calificacion (0-100):"))
+
+if calificacion >= 90 and calificacion <= 100:
+    print("Excelente")
+elif calificacion >= 70 and calificacion < 90:
+    print("Aprobado")
+elif calificacion >= 0 and calificacion < 70:
+    print("Ay!, no aprobado")
+else:
+    print(" Calificacion invalida")
